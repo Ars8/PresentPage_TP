@@ -4,8 +4,10 @@ const move = () => {
   const elem = document.querySelector('#myBar');
     
 function calc() {
-  if (fact.value > plan.value) {
-    console.log("error")
+  if (+fact.value > +plan.value) {
+    elem.style.width = 0 + "%";
+    alert('Слишком много!');
+    fact.value = '';
   } else {
     let factPercent = (fact.value / plan.value)*100;
     elem.style.width = factPercent + "%";

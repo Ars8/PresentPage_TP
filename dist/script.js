@@ -96,12 +96,84 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/progress */ "./src/js/modules/progress.js");
+/* harmony import */ var _modules_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/buttons */ "./src/js/modules/buttons.js");
+/* harmony import */ var _modules_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/color */ "./src/js/modules/color.js");
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   Object(_modules_progress__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  Object(_modules_buttons__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_modules_color__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/buttons.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/buttons.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const buttons = () => {
+  function addEventOnButton(triggerSelector) {
+    const trigger = document.querySelector(triggerSelector);
+    trigger.addEventListener('click', e => {
+      if (e.target) {
+        e.preventDefault();
+        console.log(`btn ${triggerSelector} was pressed`);
+      } else {
+        console.log('btn was pressed');
+      }
+    });
+  }
+
+  ;
+  addEventOnButton('.header__prev__btn');
+  addEventOnButton('.header__next__btn');
+  addEventOnButton('.header__down__btn');
+  addEventOnButton('.header__group__btn');
+  addEventOnButton('.main__progress__status__btn');
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (buttons);
+
+/***/ }),
+
+/***/ "./src/js/modules/color.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/color.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const color = () => {
+  function changeColor(titleSelector) {
+    const title = document.querySelector(titleSelector);
+
+    if (+title.innerHTML < 100) {
+      title.style.color = "red";
+    } else if (+title.innerHTML === 100) {
+      title.style.color = "yellow";
+    } else if (+title.innerHTML > 100) {
+      title.style.color = "#36C496";
+    }
+
+    ;
+  }
+
+  ;
+  changeColor('.main__statistic__value__result');
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (color);
 
 /***/ }),
 
@@ -120,8 +192,10 @@ const move = () => {
   const elem = document.querySelector('#myBar');
 
   function calc() {
-    if (fact.value > plan.value) {
-      console.log("error");
+    if (+fact.value > +plan.value) {
+      elem.style.width = 0 + "%";
+      alert('Слишком много!');
+      fact.value = '';
     } else {
       let factPercent = fact.value / plan.value * 100;
       elem.style.width = factPercent + "%";

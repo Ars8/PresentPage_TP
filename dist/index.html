@@ -11,13 +11,25 @@
       <header class="header">
         <div class="header__nav">
           <div class="header__nav__date">
-            <img src="assets/img/Vector_prev.svg" alt />
+            <img
+              class="header__prev__btn"
+              src="assets/img/Vector_prev.svg"
+              alt
+            />
             <div class="header__nav__date__text">Апрель 2021</div>
-            <img src="assets/img/Vector_next.svg" alt />
+            <img
+              class="header__next__btn"
+              src="assets/img/Vector_next.svg"
+              alt
+            />
           </div>
           <div class="header__nav__icon">
-            <img class="" src="assets/img/down-arrow.svg" alt />
-            <img src="assets/img/Group.svg" alt />
+            <img
+              class="header__down__btn"
+              src="assets/img/down-arrow.svg"
+              alt
+            />
+            <img class="header__group__btn" src="assets/img/Group.svg" alt />
           </div>
         </div>
         <div class="header__info">
@@ -32,68 +44,71 @@
         <div class="main__statistic">
           <div class="main__statistic__block">
             <p class="main__statistic__title">Норматив</p>
-            <div class="main__statistic__value">100%</div>
+            <div class="main__statistic__value">
+              100%
+            </div>
           </div>
           <div class="main__line"></div>
           <div class="main__statistic__block">
             <p class="main__statistic__title">Результат</p>
-            <div class="main__statistic__value" style="color: green;">102,5%</div>
+            <div class="main__statistic__value">
+              <span class="main__statistic__value__result">102.5</span>
+              %
+            </div>
           </div>
           <div class="main__line"></div>
           <div class="main__statistic__block">
             <p class="main__statistic__title">Премия</p>
-            <div class="main__statistic__value" style="color: blue;">77330Р</div>
+            <div class="main__statistic__value">
+              <span class="main__statistic__value__cash">77330Р</span>
+            </div>
           </div>
         </div>
         <div class="main__buttons">
-          <div class="main__buttons__item">
+          <a href="#" class="main__buttons__item">
             <img src="assets/img/career.svg" alt />
-            <div class="main__buttons__item__text">
-              Карта целей
-            </div>
-          </div>
-          <div class="main__buttons__item">
+            <div class="main__buttons__item__text">Карта целей</div>
+          </a>
+          <a href="#" class="main__buttons__item">
             <img src="assets/img/tasks.svg" alt />
-            <div class="main__buttons__item__text">
-              SMART Задачи
-            </div>
-          </div>
-          <div class="main__buttons__item">
+            <div class="main__buttons__item__text">SMART Задачи</div>
+          </a>
+          <a href="#" class="main__buttons__item">
             <img src="assets/img/data-analysis.svg" alt />
-            <div class="main__buttons__item__text">
-              Оценки
-            </div>
-          </div>
-          <div class="main__buttons__item">
+            <div class="main__buttons__item__text">Оценки</div>
+          </a>
+          <a href="#" class="main__buttons__item">
             <img src="assets/img/message.svg" alt />
-            <div class="main__buttons__item__text">
-              Сообщения
-            </div>
-          </div>
-          <div class="main__buttons__item">
+            <div class="main__buttons__item__text">Сообщения</div>
+          </a>
+          <a href="#" class="main__buttons__item">
             <img src="assets/img/monitor.svg" alt />
-            <div class="main__buttons__item__text">
-              Отчеты
-            </div>
-          </div>
-          <div class="main__buttons__item">
+            <div class="main__buttons__item__text">Отчеты</div>
+          </a>
+          <a href="#" class="main__buttons__item">
             <img src="assets/img/wallet.svg" alt />
-            <div class="main__buttons__item__text">
-              Премия
-            </div>
-          </div>
+            <div class="main__buttons__item__text">Премия</div>
+          </a>
         </div>
         <div class="main__progress">
-          <div>
+          <div class="main__progress__status">
             <div>Текущий статус:</div>
-            <div>Работаю</div>
+            <a href="#" class="main__progress__status__btn">Работаю</a>
           </div>
           <div id="myProgress">
             <div id="myBar"></div>
           </div>
-          <div>
-            <div>план: 176ч.<input type="text" id="plan" placeholder="план"></div>
-            <div>факт: 104ч.<input type="text" id="fact" placeholder="факт"></div>
+          <div class="main__progress__input__block">
+            <div class="main__progress__plan">
+              <div class="main__progress__green"></div>
+              план:
+              <input type="text" id="plan" placeholder="план" />
+            </div>
+            <div class="main__progress__fact">
+              <div class="main__progress__yellow"></div>
+              факт:
+              <input type="text" id="fact" placeholder="факт" />
+            </div>
           </div>
         </div>
       </main>
