@@ -140,6 +140,7 @@ p {
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 .main__buttons__item img {
   width: 48px;
@@ -219,4 +220,25 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 5px;
+}
+@media (max-width: 467px) {
+  .container {
+    width: 100%;
+  }
+  .main__statistic {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .main__line {
+    display: none;
+  }
+  .main__statistic__block {
+    margin: 5px 0;
+  }
+  .main__buttons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
